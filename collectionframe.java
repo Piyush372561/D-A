@@ -11,5 +11,10 @@ public class collectionframe {
             list.add(5);
             System.out.println("ArrayList: " + list);
             
+            list.remove(2);
+            System.out.println("After removing element at index 2: " + list);
+
+            list.clear();
+            System.out.println("After clearing the list: " + list);
     }
 }
