@@ -92,6 +92,47 @@ public class collectionframe {
             List<String> ListFromArray2 = Arrays.asList(array);
             System.out.println(ListFromArray2.getClass().getName());
 
+            //5. Using List.of() method creates an immutable list containing the specified elements
+            // List.of() method returns an immutable list containing the specified elements. This means that the list cannot be modified after it is created, and any attempt to add, remove, or modify elements in the list will throw an UnsupportedOperationException.
+            List<Integer> ImmutableList = List.of(1, 2, 3, 4, 5);
+            System.out.println(ImmutableList.getClass().getName());
+ 
+            // To create a mutable list from an immutable list, we can use the ArrayList constructor that takes a collection as an argument. This allows us to create a new ArrayList that contains the same elements as the immutable list, but can be modified as needed.
+            List<String> List4 = new ArrayList<>(ListFromArray2);
+            List4.add("Vanilla Milkshake");
+            System.out.println(List4);
+            System.out.println(List4.getClass().getName());
 
+            // We can also create a mutable list from an immutable list using the addAll() method. This allows us to add all the elements from the immutable list to a new mutable list, which can then be modified as needed.
+            List<Integer> list5 = new ArrayList<>();
+            list5.add(1);
+            list5.add(2);
+            list5.add(3);
+            list5.add(4);
+            list5.add(5);
+
+            List<Integer> List6 = List.of(6,7,8,9,10);
+            list5.addAll(List6);
+            System.out.println(list5);
+
+            //
+            List<Integer> list7 = new ArrayList<>();
+            list7.add(1);
+            list7.add(2);
+            list7.add(3);
+
+            // removes the element at index 1 not the element with value 1
+            list7.remove(1);
+                System.out.println(list7);
+
+             List<String> list8 = new ArrayList<>();
+             list8.add("Apple");
+             list8.add("Apple");
+             list8.add("Banana");
+             list8.add("Cherry");
+
+             // removes the first occurrence of "Apple" from the list, not all occurrences
+             list8.remove("Apple");
+                System.out.println(list8);
     }
 }
