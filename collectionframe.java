@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
 public class collectionframe {
     public static void main(String[] args) {
             System.out.println("Collection Framework:");
@@ -115,7 +117,7 @@ public class collectionframe {
             list5.addAll(List6);
             System.out.println(list5);
 
-            //
+            // When we want to remove an element from a list, we can use the remove() method. However, if we want to remove an element by its value rather than its index, we need to be careful when working with lists of integers. This is because the remove() method can be ambiguous when it comes to removing elements from a list of integers, as it can either remove the element at a specific index or the first occurrence of a specific value.
             List<Integer> list7 = new ArrayList<>();
             list7.add(1);
             list7.add(2);
@@ -124,6 +126,10 @@ public class collectionframe {
             // removes the element at index 1 not the element with value 1
             list7.remove(1);
                 System.out.println(list7);
+
+            // To remove the element with value 1, we can use the remove() method with the Integer.valueOf() method to specify that we want to remove the element with the value of 1 rather than the element at index 1.
+            list7.remove(Integer.valueOf(1));  
+                System.out.println(list7);  
 
              List<String> list8 = new ArrayList<>();
              list8.add("Apple");
@@ -134,5 +140,27 @@ public class collectionframe {
              // removes the first occurrence of "Apple" from the list, not all occurrences
              list8.remove("Apple");
                 System.out.println(list8);
+
+
+            // we convert list to array using toArray() method. This method returns an array containing all the elements in the list in the correct order. We can specify the type of the array by passing an array of the desired type as an argument to the toArray() method.
+            List<String> list9 = new ArrayList<>();
+            list9.add("Piyush");
+            list9.add("Lakshya");
+            list9.add("Vaishnavi");
+
+            Object[] array2 =list9.toArray();
+            String[] str = list9.toArray(new String[0]);
+            System.out.println(Arrays.toString(array2));
+
+            // Sorting a list using Collections.sort() method. This method sorts the elements of the list in their natural order (for example, for strings, it sorts them in alphabetical order). We can also specify a custom comparator to sort the list in a different order.
+            List<String> list10 = new ArrayList<>();
+            list10.add("Piyush");
+            list10.add("Lakshya");
+            list10.add("Vaishnavi");
+
+            Collections.sort(list10);
+            System.out.println("Sorted list: " + list10);
+
+             
     }
 }
