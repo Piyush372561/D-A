@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 public class ArrayL {
     public static void main(String[] args) {
 
@@ -77,5 +78,35 @@ public class ArrayL {
     }
     System.out.println("List is :"+i);
     System.out.println("Sum of a list is: "+sum);
+
+    //Question-9 :Write a program to reverse an ArrayList
+    ArrayList<Integer> Revnum = new ArrayList<>();
+    Revnum.add(3);
+    Revnum.add(6);
+    Revnum.add(9);
+    Revnum.add(12);
+    Revnum.add(15);
+    System.out.println("Original List: "+Revnum);
+    //Simple logic
+    for(int p = Revnum.size()-1; p >=0; p--){
+         System.out.print(Revnum.get(p)+ " ");
+    }
+    //Using collection method
+    Collections.reverse(Revnum);
+    System.out.println(Revnum);
+
+    // The OG method
+    int r = 0;
+    int s = Revnum.size() - 1;
+    
+    while (r < s) { 
+        int temp = Revnum.get(r);
+        Revnum.set(r,Revnum.get(s));
+        Revnum.set(s,temp);
+
+        r++;
+        s--;
+    }
+    System.out.print(Revnum);
   }
 }
