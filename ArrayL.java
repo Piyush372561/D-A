@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class ArrayL {
     public static void main(String[] args) {
 
+        //Easy Level Questions 
         // Question-1 : Create an ArrayList of integers and add some numbers to it. Then, print the list.
          System.out.println("Array List no. 1");
         ArrayList<Integer> numbers = new ArrayList<>();
@@ -32,8 +33,49 @@ public class ArrayL {
         AL.add(6);
         AL.add(8);
         System.out.println(AL);
-        System.out.println(AL.contains(11));
+        System.out.println(AL.contains(50));
 
-
+        // Medium level Questions 
+        //Question-6 : 
+        ArrayList<Integer> Max_N = new ArrayList<>();
+        Max_N.add(10);
+        Max_N.add(20);
+        Max_N.add(30);
+        Max_N.add(40);
+        int maxi = Max_N.get(0);
+        for(int i = 0; i < Max_N.size(); i++) {
+            if(Max_N.get(i) > maxi){
+                maxi = Max_N.get(i);
+        }
     }
+    System.out.println("Maximum no.= "+maxi);
+
+    //Question-7 :
+    ArrayList<Integer> al = new ArrayList<>();
+    al.add(2);
+    al.add(4);
+    al.add(6);
+    al.add(8);
+    int min = al.get(3);
+    for (int i = al.size() - 1; i >=0; i--) {
+        if (min > al.get(i)) {
+            min = al.get(i);
+        }
+    }
+    System.out.println("Minimum no.= "+min);
+
+    //Question-8
+    ArrayList<Integer> i = new ArrayList<>();
+    i.add(1);
+    i.add(2);
+    i.add(3);
+    i.add(4);
+    i.add(5);
+    int sum = 0;
+    for(int n = 0; n <= i.size()-1; n++){
+        sum = sum + i.get(n);
+    }
+    System.out.println("List is :"+i);
+    System.out.println("Sum of a list is: "+sum);
+  }
 }
