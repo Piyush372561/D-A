@@ -108,5 +108,20 @@ public class ArrayL {
         s--;
     }
     System.out.print(Revnum);
+
+    // Question-10
+    ArrayList<Integer> Sort = new ArrayList<>();
+    Sort.add(10);
+    Sort.add(50);
+    Sort.add(5);
+    Sort.add(1);
+    System.out.println("Unsorted List: "+Sort);
+    Collections.sort(Sort);
+    System.out.println("Sorted List: "+Sort);
+    
+
+
+
+
   }
 }
