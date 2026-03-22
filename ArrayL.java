@@ -85,7 +85,7 @@ public class ArrayL {
     Revnum.add(6);
     Revnum.add(9);
     Revnum.add(12);
-    Revnum.add(15);
+    
     System.out.println("Original List: "+Revnum);
     //Simple logic
     for(int p = Revnum.size()-1; p >=0; p--){
