@@ -3,7 +3,7 @@ import java.util.Collections;
 public class ArrayL {
     public static void main(String[] args) {
 
-        //Easy Level Questions 
+//Easy Level Questions 
         // Question-1 : Create an ArrayList of integers and add some numbers to it. Then, print the list.
          System.out.println("Array List no. 1");
         ArrayList<Integer> numbers = new ArrayList<>();
@@ -36,7 +36,8 @@ public class ArrayL {
         System.out.println(AL);
         System.out.println(AL.contains(50));
 
-        // Medium level Questions 
+ // Medium level Questions 
+
         //Question-6 : 
         ArrayList<Integer> Max_N = new ArrayList<>();
         Max_N.add(10);
@@ -119,9 +120,39 @@ public class ArrayL {
     Collections.sort(Sort);
     System.out.println("Sorted List: "+Sort);
     
+//Good Logical Questions
+ 
+    //Question - 11 : 
+    ArrayList<Integer> Duplet = new ArrayList<>();
+    Duplet.add(10);
+    Duplet.add(20);
+    Duplet.add(10);
+    Duplet.add(20);
+    Duplet.add(30);
+    Duplet.add(30);
+    Duplet.add(40);
+    System.out.println(Duplet);
+    Duplet.remove(10);
+    Duplet.remove(20);
+    Duplet.remove(30);
+    System.out.print(Duplet);
 
+    //Question-11
+    ArrayList<Integer> Oglist = new ArrayList<>();
+    ArrayList<Integer> newlist = new ArrayList<>();
+    Oglist.add(10);
+    Oglist.add(20);
+    Oglist.add(20);
+    Oglist.add(30);
+    Oglist.add(40);
+    Oglist.add(50);
+    System.out.println("Oglist :"+Oglist);
 
-
-
+    for (int k = 0; k < Oglist.size(); k++) {
+        if (!newlist.contains(Oglist.get(k))) {
+            newlist.add(Oglist.get(k));
+        }
+    }
+    System.out.println(newlist);
   }
 }
