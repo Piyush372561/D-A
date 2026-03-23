@@ -154,5 +154,13 @@ public class ArrayL {
         }
     }
     System.out.println(newlist);
+
+
+
+
+
+
+
+    
   }
 }
