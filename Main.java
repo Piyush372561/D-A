@@ -1,5 +1,16 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+
+class stringLengthcomparator implements Comparator<String>{
+
+    @Override
+    public int compare(String o1, String o2){
+        return o1.length() - o2.length();
+      //  return o2.length() - o1.length();
+    }
+}
 
 
 class Mycomparator implements Comparator<Integer> {
@@ -25,7 +36,13 @@ public class Main {
         list.sort(new Mycomparator());
         System.out.println("New list = "+list);
 
-
-
+        /* List<String> list1 = new ArrayList<>();
+        list1.add("Ajay");
+        list1.add("Seema");
+        list1.add("Piyush");
+        list1.add("Lakshya"); */
+        List<String> list1 = Arrays.asList("Piyush", "Lakshya", "Mahesh", "Seema", "Ajay");
+        list1.sort(new stringLengthcomparator());
+        System.out.println("List1 = "+list1);
     }
 }
