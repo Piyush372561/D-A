@@ -3,6 +3,21 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+class Student{
+
+    private String name;
+
+    private double gpa;
+
+    public Student(String name, double gpa){
+        this.name = name;
+        this.gpa = gpa;
+    }
+
+    public String getName() { return name ;}
+    public double getGpa() { return gpa; }
+}
+
 class stringLengthcomparator implements Comparator<String>{
 
     @Override
@@ -44,5 +59,17 @@ public class Main {
         List<String> list1 = Arrays.asList("Piyush", "Lakshya", "Mahesh", "Seema", "Ajay");
         list1.sort(new stringLengthcomparator());
         System.out.println("List1 = "+list1);
+
+        //lambda expression.
+        List<String> lambda_E = Arrays.asList("Kushwaha", "Sharma", "Sahu");
+        lambda_E.sort((a, b) -> a.length() - b.length());
+        System.out.println(lambda_E);
+
+        //
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Abhay", 3.5));
+        students.add(new Student("vishal", 5.5));
+        students.add(new Student("Piyush", 6.5));
+
     }
 }
