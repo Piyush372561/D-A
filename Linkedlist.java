@@ -25,8 +25,5 @@ public class Linkedlist {
         LinkedList<String> animalsremoved = new LinkedList<>(Arrays.asList("Dog", "Cat"));
         animals.removeAll(animalsremoved);
         System.out.println(animals);
-
-
-
     }
 }
