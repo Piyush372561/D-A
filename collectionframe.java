@@ -68,7 +68,7 @@ public class collectionframe {
             ArrayList<String> Names = new ArrayList<>();
             Names.add("Piyush");
             Names.add("Lakshya");
-            Names.add("Vaishnavi");
+            Names.add("Deepak");
             Names.add("Daksh");
             Names.add("Vishal");
             System.out.println(Names.getClass().getName());
